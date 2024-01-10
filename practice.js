@@ -30,7 +30,7 @@ function last(inputArray) {
 // Inside the function below, add num to the end of inputArray.
 
 function addItem(inputArray, num) {
-  //Code here
+  inputArray.push(num)
   return inputArray;
 }
 
@@ -39,7 +39,7 @@ function addItem(inputArray, num) {
 // Inside the function below, remove the last item of inputArray.
 
 function removeLast(inputArray) {
-  //Code here
+  inputArray.pop();
   return inputArray;
 }
 
@@ -48,7 +48,7 @@ function removeLast(inputArray) {
 // Inside the function below, remove the first item of inputArray.
 
 function removeFirst(inputArray) {
-  //Code here
+  inputArray.shift();
   return inputArray;
 }
 
@@ -58,7 +58,8 @@ function removeFirst(inputArray) {
 // You can assume the array will be at least 2 items long.
 
 function replaceFirstAndLast(inputArray) {
-  //Code here
+  inputArray [0] = 42
+  inputArray[(inputArray.length - 1)] = 42
   return inputArray;
 }
 
@@ -72,8 +73,10 @@ function replaceFirstAndLast(inputArray) {
 
 function addTen(inputArray) {
   let newArr = [];
-  // Code here
-
+  for (let num of inputArray){
+    newArr.push(num + 10)
+  }
+  
   return newArr;
 }
 
@@ -83,8 +86,8 @@ function addTen(inputArray) {
 
 function count31() {
   let numbers = [];
-  // Code here
-
+  for (let i = 0; i < 32; i +=1) 
+  numbers.push(i);
   return numbers;
 }
 
@@ -94,7 +97,8 @@ function count31() {
 
 function countEvens() {
   let numbers = [];
-  // Code here
+  for (let i = 0; i < 21; i +=2) 
+  numbers.push(i);
 
   return numbers;
 }
@@ -105,7 +109,8 @@ function countEvens() {
 
 function countdown() {
   let numbers = [];
-  // Code here
+  for (let i = 10; i >= 1; i -=1)
+  numbers.push(i)
 
   return numbers;
 }
@@ -120,7 +125,8 @@ function countdown() {
 
 function backwards(inputArray) {
   let newArray = [];
-  // Code here
+  for (let i = inputArray.length - 1; i >= 0; i -= 1)
+  newArray.push(i)
 
   return newArray;
 }
