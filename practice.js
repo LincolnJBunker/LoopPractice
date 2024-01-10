@@ -140,7 +140,15 @@ function backwards(inputArray) {
 // findInArray([0,1,2,3], 4); -> false
 
 function findInArray(inputArray, value) {
-  // Code here
+let valueFound;  
+
+if (inputArray.includes(value)) {
+  valueFound = true
+}
+else {
+  valueFound = false
+}
+
   return valueFound;
 }
 
@@ -154,7 +162,12 @@ function findInArray(inputArray, value) {
 
 function stopAtNegative(inputArray) {
   let newArray = [];
-  // Code here
-
+  
+  for (let num of inputArray) {
+    if (num >= 0) {
+      newArray.push(num)
+    } else break; 
+  }
+  
   return newArray;
 }
