@@ -126,7 +126,7 @@ function countdown() {
 function backwards(inputArray) {
   let newArray = [];
   for (let i = inputArray.length - 1; i >= 0; i -= 1)
-  newArray.push(i)
+  newArray.push(inputArray[i])
 
   return newArray;
 }
